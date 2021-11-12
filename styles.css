@@ -88,6 +88,10 @@ img{
     position: fixed;
     right: 2vw;
     bottom: 2vw;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: var(--radio-boton);
     height: var(--radio-boton);
     font-size: 5rem;
