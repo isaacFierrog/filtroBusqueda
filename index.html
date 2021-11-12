@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Estilos CSS-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <h1 class="header__titulo">Buscador de usuarios</h1>
+            <input type="text" name="buscador" class="header__input" placeholder="Busca un usuario">
+        </div>
+    </header>
+    <main class="main container">
+
+    </main>
+    <button class="boton boton--oculto">&Uparrow;</button>
+
+    <template id="template-usuario">
+        <article class="usuario">
+            <img src="" alt="" class="usuario__imagen">
+            <div class="usuario__info">
+                <h3>Nombre</h3>
+                <p class="usuario__nombre"></p>
+            </div>
+        </article>
+    </template>
+
+    <script src="main.js" type="module"></script>
+</body>
+</html>

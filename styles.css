@@ -1,0 +1,129 @@
+/*Variables*/
+:root{
+    --radio-boton: 8rem;
+    --fondo-boton: #29618b;
+    --fondo-header: #142F43;
+}
+
+/*Estilos globales*/
+html{
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.6rem;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.container{
+    width: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+/*Estilos header*/
+.header{
+    position: sticky;
+    top: 0;
+    background-color: var(--fondo-header);    
+}
+.header__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+.header__titulo{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+.header__input{
+    display: block;
+    width: 60%;
+    padding: 1rem;
+}
+
+
+/*Estilos usuarios*/
+.main,
+.usuario{
+    display: flex;
+    padding: 2rem;
+}
+.main{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.usuario{
+    flex-basis: calc(90% - 2rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: .1rem solid black;
+    transition: all .2s ease-in-out;
+}
+.usuario__info{
+    margin-top: 1rem;
+    text-align: center;
+}
+.usuario__oculto{
+    order: 1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.boton{
+    position: fixed;
+    right: 2vw;
+    bottom: 2vw;
+    width: var(--radio-boton);
+    height: var(--radio-boton);
+    font-size: 5rem;
+    border: .2rem solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    background-color: var(--fondo-boton);
+    opacity: .7;
+    transition: all .2s ease-in-out;
+}
+.boton--oculto{
+    opacity: 0;
+    visibility: hidden;
+}
+.boton:hover{
+    opacity: 1;
+}
+
+@media screen and (min-width: 425px){
+    .header__titulo{
+        font-size: 3.5rem;
+    }
+    .usuario{
+        flex-basis: calc((100% / 2) - 2rem);
+    }
+}
+
+@media screen and (min-width: 768px){
+    .header__container{
+        flex-direction: row;
+    }
+    .header__input{
+        width: 40%;
+    }
+    .usuario{
+        flex-basis: calc((100% / 3) - 2rem);
+    }
+}
